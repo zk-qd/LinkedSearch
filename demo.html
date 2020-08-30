@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    input {
+        height: 30px;
+        width: 200px;
+    }
+    div {
+        width: 200px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+</style>
+
+<body>
+    <link rel="stylesheet" href="./less/index.css">
+    <script src="./js/index.js"></script>
+    <div>
+        <input type="text" class='input'>
+    </div>
+    <script>
+        new LinkedList(document.getElementsByClassName('input')[0], function () {
+            return [
+                'a',
+                'ab',
+                'abc',
+                'abcd',
+                'abcde',
+                'abcdef',
+                'abcdefg',
+                'abcdefgh',
+                'abcdefghi',
+                'abcdefghil',
+                'abcdefghilm',
+                'abcdefghilmn',
+                'abcdefghilmno',
+                'abcdefghilmnop',
+            ]
+        });
+
+    </script>
+</body>
+
+</html>

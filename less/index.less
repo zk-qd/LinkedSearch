@@ -1,0 +1,68 @@
+@height: 30px; // li的高度
+@max-height: @height * 10; // ul最大高度
+@font-size: 14px; // 字体大小
+@color: #999; // 字体颜色
+@padding: 0px 10px;
+@hoverBackground: #FAFAFA; // 悬停背景色
+@delay: 0s; // 过渡等待时间
+@duration: 2s; // 过渡持续时间
+@prop: all; //过渡属性
+
+.linked-input-css {
+    position: relative;
+
+    >.linked-ul-container {
+        min-width: 100%;
+        position: absolute;
+        z-index: 1001;
+        left: 0;
+        right: 0;
+        top: 100%;
+        max-height: @max-height;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
+        border: 1px solid #e4e7ed;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+
+        // 过渡
+        &.linked-ul-transition {
+            transition: @prop @duration linear @delay;
+        }
+
+        // 滚动条
+        &::-webkit-scrollbar {
+            width: .5vh;
+            height: @height * 3;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: .5vh;
+            background: rgba(0, 0, 0, .02);
+        }
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            background: rgba(0, 0, 0, .01);
+        }
+
+        >li {
+            height: @height;
+            line-height: @height;
+            font-size: @font-size;
+            color: @color;
+            padding: @padding;
+
+            &:hover {
+                background: @hoverBackground;
+            }
+
+        }
+    }
+}
